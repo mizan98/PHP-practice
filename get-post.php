@@ -1,17 +1,13 @@
 <?php
 
 // ---- Get requests (information in the form below goess into get array) ----//
-print_r ($_GET);
+if( isset($_POST['userName']) && isset($_POST['userEmail'])) {
+    $name = htmlentities( $_POST['userName'] );
+    echo "My name is $name <br>";
 
-$name = $_GET['userName'];
-echo "My name is $name";
-
-if( isset($_GET['userName']) && isset($_GET['userEmail'])) {
-    $name = $_GET['userName'];
-    echo "my name is $name <br>";
-
-    $email = $_GET['userEmail'];
-    echo "my email is $email <br>";
+    $email = htmlentities(  $_POST['userEmail'] );
+    echo "My email is " . $email . "<br>";
+    echo "This is from a POST form";
 }
 
 
