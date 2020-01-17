@@ -40,7 +40,10 @@
 <body>
     <div class="container">
         <h1>Add Post</h1>
-                <form action="addpost.php" method="POST">
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li> 
+        </nav>
         <div class="form-group">
             <label for="postTitle">Add Post Title</label>
             <input required name="postTitle" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

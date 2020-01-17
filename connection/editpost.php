@@ -50,6 +50,10 @@ else {
 <body>
     <div class="container">
         <h1>Edit Post</h1>
+        <nav>
+            <ul>
+                <li><a href="index.php">Home</a></li> 
+        </nav>
                 <form action="Editpost.php" method="POST">
         <div class="form-group">
             <label for="postTitle">Edit Post Title</label>

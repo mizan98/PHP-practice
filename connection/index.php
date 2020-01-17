@@ -40,6 +40,7 @@
             <h4>Created by <?php echo $post['author']?></h4>
             <p><?php echo $post['body']?></p>
             <a href="./editpost.php?id=<?php echo $post['id']?>">Edit Post</a>
+            <a href="./deletepost.php?id= <? echo $post['id']; ?>">Delete Post</a>
         </div>
         <?php } ?>
     </div>
