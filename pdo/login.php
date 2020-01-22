@@ -13,8 +13,10 @@
         $user = $stmt->fetch();
 
         if(password_verify($password, $user->password)) {
-            $_SESSION['userID'] = $user->id;
+            $_SESSION['userId'] = $user->id;
             header('Location: http://localhost:8888/php-basics/pdo/index.php');
+        } else {
+            echo "Passwords do not match";
         }
 
 
@@ -49,7 +51,7 @@
             <li><a href="login.php">Login</a></li>
         </ul>
     </nav>
-        <?php if(!isset($user_registered)) { ?>
+
     <h1>Login User</h1>
         <form action="login.php" method="POST">
 
@@ -64,10 +66,6 @@
             </div>
             <button name="login" type="submit" class="btn btn-primary">Login</button>
         </form>
-        <?php } else { ?>
-            <h1>User Registered</h1>
-            <h3>Please Login</h3>
-        <?php } ?>
     </div>
 </body>
 </html>
