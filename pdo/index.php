@@ -21,15 +21,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='style.css'></link>
     <title>Document</title>
 </head>
 <body>
-    <nav>
-        <h1>Navigation Bar</h1>
+    <nav class='navbar'>
         <ul>
             <?php if(isset($user)) { ?>
-                <li><a href="dashboard.php">dashboard</a></li>
-                <li><a href="logout.php">logout</a></li>
+                <button><a href="dashboard.php">dashboard</a></button>
+                <button><a href="logout.php">logout</a></button>
             <?php } else { ?>
                 <li><a href="register.php">Register</a></li>
                 <li><a href="login.php">Login</a></li>
@@ -51,7 +51,7 @@
         <?php } ?>
         <p>This is a super secret content only for logged in people</p>
     <?php } else { ?>
-        <h1>Welcome Guest</h1>
+        <h1>Please Log in</h1>
     <?php } ?>  
 </body>
 </html>
